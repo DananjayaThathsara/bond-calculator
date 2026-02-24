@@ -4,7 +4,7 @@ import type { BondInput, BondResult } from "../types/bond.types";
  * Sends bond input to the backend API and returns calculated results
  */
 export async function calculateBond(bondInput: BondInput): Promise<BondResult> {
-  const response = await fetch("http://localhost:3000/bond/calculate", {
+  const response = await fetch(`${import.meta.env.VITE_API_URL}/bond/calculate`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
