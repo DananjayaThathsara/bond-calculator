@@ -8,7 +8,7 @@ async function bootstrap() {
 
   // allow React frontend at localhost:5173 to access the API
   app.enableCors({
-    origin: process.env.FRONTEND_URL || 'http://localhost:5173',
+    origin: '*',
   });
 
   // apply global validation pipes (class-validator)
